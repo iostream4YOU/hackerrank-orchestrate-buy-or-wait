@@ -26,7 +26,8 @@ def explain(dec) -> str:
     if dec.method == "installments":
         n = len(dec.plan)
         amt = dec.plan[0][1]
-        return (f"Use {n} installments of {money(amt, cur)}, starting {human(dec.plan[0][0])}. "
+        lead = f"{_change_phrase(dec.changes, cur)}, then use" if dec.changes else "Use"
+        return (f"{lead} {n} installments of {money(amt, cur)}, starting {human(dec.plan[0][0])}. "
                 f"This leaves at least {money(mn, cur)} available.")
     if dec.method == "partial_payment":
         (d1, a1), (d2, a2) = dec.plan
@@ -35,6 +36,14 @@ def explain(dec) -> str:
     if dec.method == "wait":
         return (f"Pay {money(A, cur)} in full on {human(dec.plan[0][0])}. Paying earlier would take "
                 f"the balance below the {money(mn, cur)} minimum.")
+    if dec.earliest is not None and dec.earliest > dec.desired_completion_date:
+        return (f"Do not make this payment by {human(dec.desired_completion_date)}. A single full payment only "
+                f"becomes safe on {human(dec.earliest)}, after the deadline, and no accepted plan keeps the "
+                f"{money(mn, cur)} minimum protected before then.")
+    if dec.earliest is not None:
+        return (f"Do not make this payment with the payment methods you accept. None of them keeps the "
+                f"{money(mn, cur)} minimum protected by {human(dec.desired_completion_date)}, although a single "
+                f"full payment would be safe on {human(dec.earliest)}.")
     if dec.astp > 0 and "partial_considered" in dec.notes:
         return (f"Do not proceed with the {money(A, cur)} request. Although {money(dec.astp, cur)} is "
                 f"available today, the full amount cannot be completed safely within 90 days.")

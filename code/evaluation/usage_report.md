@@ -1,6 +1,6 @@
 # Token usage and cost report
 
-- Run finished: 2026-09-12T16:59:44+00:00
+- Run finished: 2026-09-12T17:20:37+00:00
 - Input: `dataset/requests.csv` (250 requests) -> `output.csv`
 - Providers: Anthropic Claude API (optional; JSON-schema structured outputs) and on-device OCR
   (Apple Vision, Tesseract fallback) for images.

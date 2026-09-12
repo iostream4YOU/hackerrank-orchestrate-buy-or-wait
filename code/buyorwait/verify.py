@@ -20,8 +20,10 @@ def check(dec, ds, prof, fc) -> list:
         errs.append("plan dates not strictly increasing")
     if dec.status == "affordable_now" and not (dec.earliest == dec.request_date and astp == A):
         errs.append("affordable_now invariant")
-    if dec.status == "not_affordable" and (dec.plan or dec.earliest is not None):
+    if dec.status == "not_affordable" and dec.plan:
         errs.append("not_affordable invariant")
+    if dec.earliest is not None and not fc.is_safe([(dec.earliest, float(A))]):
+        errs.append("earliest date is not actually safe")
     if dec.method == "partial_payment":
         total = sum(to_cents(a) for _, a in dec.plan)
         if (dec.status != "affordable_with_plan" or len(dec.plan) != 2 or total != A

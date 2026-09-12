@@ -46,7 +46,15 @@ checked that each tuned setting is best on both halves of the samples, so it is 
 8. **Spending changes:** only flexible, non-protected series in categories the user allowed; max 3;
    smallest total cut wins (request_21 picks "stop backup + reduce streaming" (34.50) over "stop
    streaming" (47)).
-9. **Images:** OCR + rules keyed on the event (balance due vs total vs net pay). Handles the ₹ glyph
+9. **Earliest date is capacity, not preference.** The spec says it is independent of payment preferences
+   and blank only if no single full payment becomes safe in the window, so not-affordable rows still
+   report it when capacity exists (e.g. an installments-only user whose options are unsafe).
+10. **Spending changes apply to installments too.** 22 installments-only requests fail by 1-18% and are
+    rescued by one small permitted cut that just covers the shortfall - the same signature as the
+    full-payment-with-changes samples (short 17.10 / cut 19; short 31.05 / cut 34.50). Change plans
+    always rank below no-change plans (rule 2).
+11. **Installment cap = number of monthly payments** (3 payments 31 days apart fit a 3-month cap).
+12. **Images:** OCR + rules keyed on the event (balance due vs total vs net pay). Handles the ₹ glyph
    misread (₹79,679.26 -> 779,679.26) using the amount-in-words line, decimal commas ($33,50), Indian
    grouping (1,00,000.00), handwritten "4 543 00", and a "paid amount in words: Zero" trap. 16/16.
 
@@ -80,5 +88,5 @@ no hardcoded answers) and reviewed each decision. The transcript is `log.txt`.
 - *What if a message contradicts the data?* Precedence: explicit amendment > newer record > settled >
   safer interpretation; e.g. unconfirmed bonus/commission/payout/refund is never counted.
 - *How are installments validated?* Schedule rebuilt from first date + k·frequency, amounts copied
-  verbatim, total ≤ max_installment_months, finishes by the deadline, safe on the forecast.
+  verbatim, number of payments ≤ max_installment_months, finishes by the deadline, safe on the forecast.
 - *Currency?* Dated rate on the settlement date in the stated direction (inverse pairs differ).

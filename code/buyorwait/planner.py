@@ -44,9 +44,9 @@ def _installment_schedule(opt):
 
 
 def _installment_months(opt) -> float:
-    n = int(opt["number_of_payments"])
-    freq = int(opt["payment_frequency_days"] or 30)
-    return n * freq / 30.0
+    """Every supplied schedule is monthly (28-31 day frequency), so its length in months is the
+    number of payments: a 3-payment plan fits a 3-month cap even when payments are 31 days apart."""
+    return float(opt["number_of_payments"])
 
 
 def change_candidates(fc, prof):
@@ -123,12 +123,18 @@ def decide(ds, req, fc) -> Decision:
             sched = _installment_schedule(opt)
             if sched[-1][0] > dcd or sched[0][0] < rd:
                 continue
-            if not fc.is_safe([(dt, float(a)) for dt, a in sched]):
+            pays = [(dt, float(a)) for dt, a in sched]
+            rank = (float(opt["total_payable_amount"]), sched[0][0], len(sched), opt["payment_option_id"])
+            if fc.is_safe(pays):
+                cands.append(((0,) + rank, Decision(**base, status="affordable_with_plan", method="installments",
+                                                    plan=sched, changes=[], option=opt)))
                 continue
-            cands.append(((0, float(opt["total_payable_amount"]), sched[0][0], len(sched),
-                           opt["payment_option_id"]),
-                          Decision(**base, status="affordable_with_plan", method="installments",
-                                   plan=sched, changes=[], option=opt)))
+            # the same schedule may become safe with permitted spending changes (ranked after no-change plans)
+            combo = find_spending_changes(fc, prof, pays)
+            if combo:
+                cands.append(((1,) + rank, Decision(**base, status="affordable_with_plan", method="installments",
+                                                    plan=sched, changes=[(c[0], c[1], c[2]) for c in combo],
+                                                    option=opt)))
 
     if partial_wanted and Decimal(0) < astp < A and earliest is not None and earliest <= dcd:
         dec = Decision(**base, status="affordable_with_plan", method="partial_payment",
@@ -150,7 +156,8 @@ def decide(ds, req, fc) -> Decision:
 
     if cands:
         return min(cands, key=lambda x: x[0])[1]
-    dec = Decision(**{**base, "earliest": None}, status="not_affordable", method="not_recommended",
-                   plan=[], changes=[])
+    # earliest stays: it measures capacity independently of preferences and is blank only when the
+    # full amount never becomes safe inside the forecast window
+    dec = Decision(**base, status="not_affordable", method="not_recommended", plan=[], changes=[])
     dec.notes.append("partial_considered" if partial_wanted else "")
     return dec

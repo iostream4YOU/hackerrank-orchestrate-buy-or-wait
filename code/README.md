@@ -79,15 +79,17 @@ alongside "stop X, then pay in full today".
 Candidates, each only if eligible (method in `payment_methods_user_will_consider`) and safe:
 
 1. full payment today;
-2. every supplied installment option within `max_installment_months` that finishes by the deadline — the plan is the option's schedule verbatim (`first_payment_date + k·frequency`, `payment_amount` string copied);
+2. every supplied installment option whose number of (monthly) payments is within `max_installment_months` and that finishes by the deadline — the plan is the option's schedule verbatim (`first_payment_date + k·frequency`, `payment_amount` string copied);
 3. partial payment: `amount_safe_to_pay` today and the rest on `earliest_date_for_full_payment`, when allowed, accepted, `0 < astp < requested` and earliest ≤ deadline;
 4. wait until the earliest safe date (needs `full_payment` accepted and earliest ≤ deadline);
-5. full payment today with ≤3 permitted spending changes: only flexible, non-protected series in a category the user agreed to reduce (`reduce_to` its minimum allowed amount) or stop; one change per event; the combination with the **smallest total cut** wins (matches `request_21`), referencing the most recent event of the series.
+5. full payment today, or a supplied installment schedule, made safe by ≤3 permitted spending changes: only flexible, non-protected series in a category the user agreed to reduce (`reduce_to` its minimum allowed amount) or stop; one change per event; the combination with the **smallest total cut** wins (matches `request_21`), referencing the most recent event of the series. Plans that need changes always rank below plans that do not.
 
 Ranking follows the problem statement: completes by the deadline → no spending changes → lowest total
 paid → earliest start → fewest payments → lowest `payment_option_id`. (A fixed "installments before
 partial" order is wrong: `request_19` picks partial because it costs less.) If nothing is safe:
-`not_affordable` / `not_recommended`, plan `none`, empty earliest.
+`not_affordable` / `not_recommended`, plan `none`. `earliest_date_for_full_payment` still reports the
+capacity date when one exists (it is preference-independent and blank only when no single full payment
+becomes safe inside the window); the explanation then says why no accepted plan works.
 
 ## Evidence: messages and images (untrusted)
 
@@ -120,7 +122,7 @@ partial" order is wrong: `request_19` picks partial because it costs less.) If n
 
 Every row is checked before it is written (`verify.py`): `0 ≤ astp ≤ requested`; enums valid;
 chronological plan dates; `affordable_now ⇒ earliest = request_date ∧ astp = requested`;
-`not_affordable ⇒ plan none ∧ earliest empty`; partial = exactly 2 payments summing to the request by
+`not_affordable ⇒ plan none`; any reported earliest date is re-checked as genuinely safe; partial = exactly 2 payments summing to the request by
 the deadline; installments match a supplied option exactly; wait = one payment on the earliest date;
 method accepted by the user; ≤3 changes, flexible only, one per event; the recommended plan is safe on
 the forecast. The run also asserts one row per request and the exact column order of
