@@ -54,7 +54,10 @@ checked that each tuned setting is best on both halves of the samples, so it is 
     full-payment-with-changes samples (short 17.10 / cut 19; short 31.05 / cut 34.50). Change plans
     always rank below no-change plans (rule 2).
 11. **Installment cap = number of monthly payments** (3 payments 31 days apart fit a 3-month cap).
-12. **Images:** OCR + rules keyed on the event (balance due vs total vs net pay). Handles the ₹ glyph
+12. **Payday ordering:** weekly/biweekly spending on a payday is taken before the salary lands; monthly
+    bills after it. It fixed four samples' astp (26%->8%, 11%->0.7%, 18%->0.9%, 10%->0.5%) and improved
+    both halves of the split-half check without changing any categorical cell.
+13. **Images:** OCR + rules keyed on the event (balance due vs total vs net pay). Handles the ₹ glyph
    misread (₹79,679.26 -> 779,679.26) using the amount-in-words line, decimal commas ($33,50), Indian
    grouping (1,00,000.00), handwritten "4 543 00", and a "paid amount in words: Zero" trap. 16/16.
 
@@ -63,7 +66,8 @@ checked that each tuned setting is best on both halves of the samples, so it is 
 - `python3 code/evaluation/main.py` — per-column exact match (+1%/5% tolerance for astp), explanation
   similarity, verifier warnings, per-row diffs.
 - `--sensitivity` — each calibrated knob scored separately on odd/even halves; all STABLE.
-- Current: status 24/25, method 25/25, plan 24/25, earliest 22/25, changes 23/25, astp 15/25 within 5%.
+- Current: status 24/25, method 25/25, plan 24/25, earliest 22/25, changes 23/25, astp 12/25 within 1%
+  and 18/25 within 5%.
 
 ## Honest limitations (say them before they are asked)
 

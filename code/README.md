@@ -66,7 +66,8 @@ All rules were derived from, and are regression-tested against, the 25 labelled 
 | pending / scheduled | pending debits reserved on settlement date; scheduled debits (bill retries, school fees, outstanding balances) on their date; pending credits, failed/cancelled rows and unrealised values ignored |
 | request day | a cadence occurrence due on the request date is already reflected in the balance; a monthly one is not; a <7-day series whose occurrence due today is missing is treated as interrupted |
 | horizon | the reference drops items on days 87–90 of the window (3 no-income samples each lose exactly their third rent there); the forecast covers 86 days. Stable on both halves of the samples. |
-| safety | end-of-day balance (debits and credits of a day netted) must stay ≥ `minimum_balance_to_keep` on every day |
+| same-day order | on a payday, routine variable spending (weekly or longer cadence) is taken before the credit lands; monthly bills and <7-day series after it; the request payment is made at the end of its day (improves astp on both halves of the samples: within-1% 9→12, mean error 13.8%→11.6%) |
+| safety | the balance (intra-day floor and end of day) must stay ≥ `minimum_balance_to_keep` on every day |
 
 **Two forecasts per request.** `amount_safe_to_pay` (largest payment today that stays safe) and
 `earliest_date_for_full_payment` (first day a single full payment stays safe to the horizon) use the
@@ -146,7 +147,7 @@ differ from the reference by ~1%.
 | `payment_plan` | 24 / 25 |
 | `earliest_date_for_full_payment` | 22 / 25 |
 | `spending_changes_needed` | 23 / 25 |
-| `amount_safe_to_pay` | 6 / 25 exact, 9 / 25 within 1%, 15 / 25 within 5% |
+| `amount_safe_to_pay` | 6 / 25 exact, 12 / 25 within 1%, 18 / 25 within 5% |
 | explanation similarity to the label text | 0.93 |
 | verifier warnings | 0 |
 

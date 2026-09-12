@@ -44,6 +44,7 @@ def sensitivity(ds, evidence):
         "HORIZON_DAYS": [80, 84, 86, 88, 90],
         "ROUNDING": ["ceil", "round", "none"],
         "SHORT_CADENCE_RULE": ["interrupted", "keep", "drop"],
+        "ORDER": ["net", "debits_first", "cadence_first"],
     }
     print("knob sensitivity (exact cells per half; * = chosen value)")
     for knob, values in knobs.items():

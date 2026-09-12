@@ -13,8 +13,11 @@ Calibrated against dataset/sample_requests.csv (see README "Forecast rules"):
 * Pending debits are reserved on their settlement date; scheduled debits on
   their date. Pending credits, failed/cancelled rows and unrealised values are
   ignored. A confirmed (scheduled) salary counts on its date and keeps recurring.
-* Safety: end-of-day balance (debits and credits of a day netted) must stay at
-  or above minimum_balance_to_keep for every day of the horizon.
+* Same-day order: routine variable spending (weekly or longer cadence) is taken before a credit that
+  lands the same day; monthly bills and short-cadence series after it. The request payment is made
+  at the end of its day.
+* Safety: the balance must stay at or above minimum_balance_to_keep at every point of every day
+  of the horizon (the intra-day floor after pre-credit debits, and the end-of-day balance).
 """
 import calendar
 import math
@@ -29,6 +32,7 @@ MIN_CADENCE_DAYS = 7               # "short" day cadence threshold (see SHORT_CA
 SHORT_CADENCE_RULE = "interrupted" # interrupted: drop short series whose occurrence due today is missing
                                    # keep: always project; drop: never project
 ROUNDING = "ceil"                  # variable-spend estimates: ceil | round | none
+ORDER = "cadence_first"            # same-day order: net | debits_first | cadence_first (calibrated)
 NON_CASH_TYPES = {"investment_valuation"}
 NON_RECURRING_TYPES = {"refund", "investment_purchase", "investment_sale", "investment_valuation"}
 ONE_OFF_INCOME = re.compile(
@@ -275,18 +279,48 @@ class Forecast:
             net[dt] -= amt
         return net
 
-    def balances(self, changes=None, payments=()):
-        net = self.daily_net(changes, payments)
+    def _pre_credit_keys(self):
+        """Series whose debits land before same-day credits under the configured ORDER."""
+        if ORDER == "debits_first":
+            return None  # every debit
+        if ORDER == "cadence_first":
+            # routine variable spending (weekly or longer cadence) happens before a same-day credit lands;
+            # monthly bills and short-cadence (<7 day) series are settled after it
+            return {s.key for s in self.series
+                    if s.direction == "debit" and not s.monthly and s.cadence >= MIN_CADENCE_DAYS}
+        return set()
+
+    def day_levels(self, changes=None, payments=()):
+        """[(date, low, end)]: low = balance after the day's pre-credit debits (the intra-day floor),
+        end = end-of-day balance. The request payment is made at the end of its day."""
+        changes = changes or {}
+        pre_keys = self._pre_credit_keys()
+        pre, rest = defaultdict(float), defaultdict(float)
+        for f in self.flows:
+            amt = f.amount
+            if f.series_key in changes:
+                kind, new_amt = changes[f.series_key]
+                if kind == "stop":
+                    continue
+                amt = -new_amt
+            early = amt < 0 and (pre_keys is None or f.series_key in pre_keys)
+            (pre if early else rest)[f.date] += amt
+        for dt, amt in payments:
+            rest[dt] -= amt
         bal, out = self.start_balance, []
         dt = self.request_date
         while dt <= self.end:
-            bal += net.get(dt, 0.0)
-            out.append((dt, bal))
+            low = bal + pre.get(dt, 0.0)
+            bal = low + rest.get(dt, 0.0)
+            out.append((dt, min(low, bal), bal))
             dt += timedelta(days=1)
         return out
 
+    def balances(self, changes=None, payments=()):
+        return [(dt, low) for dt, low, _ in self.day_levels(changes, payments)]
+
     def min_headroom(self, changes=None, payments=()):
-        return min(b for _, b in self.balances(changes, payments)) - self.min_balance
+        return min(low for _, low, _ in self.day_levels(changes, payments)) - self.min_balance
 
     def is_safe(self, payments, changes=None) -> bool:
         return self.min_headroom(changes, payments) >= -EPS
@@ -296,21 +330,20 @@ class Forecast:
         return max(0.0, min(requested, self.min_headroom(changes)))
 
     def earliest_full(self, requested: float, changes=None, until: date | None = None):
-        bals = self.balances(changes)
+        """First day a single full payment (made at the end of that day) keeps every later floor safe."""
+        lv = self.day_levels(changes)
         until = until or self.end
-        running_min_before = math.inf
-        suffix_min = [0.0] * len(bals)
-        m = math.inf
-        for i in range(len(bals) - 1, -1, -1):
-            m = min(m, bals[i][1])
-            suffix_min[i] = m
-        for i, (dt, _) in enumerate(bals):
+        mn = self.min_balance - EPS
+        after = [math.inf] * (len(lv) + 1)           # min floor strictly after day i
+        for i in range(len(lv) - 1, -1, -1):
+            after[i] = min(after[i + 1], lv[i][1])
+        floor_before = math.inf
+        for i, (dt, low, end) in enumerate(lv):
             if dt > until:
                 break
-            before_ok = running_min_before >= self.min_balance - EPS
-            if before_ok and suffix_min[i] - requested >= self.min_balance - EPS:
+            if floor_before >= mn and low >= mn and min(end, after[i + 1]) - requested >= mn:
                 return dt
-            running_min_before = min(running_min_before, bals[i][1])
+            floor_before = min(floor_before, low)
         return None
 
 
