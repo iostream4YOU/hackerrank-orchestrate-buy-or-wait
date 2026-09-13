@@ -4,6 +4,8 @@ Everything downstream works in the user's home currency. Foreign-currency cash
 events are converted with the dated rate row for their settlement date, in the
 stated from->to direction (both directions exist and are NOT exact inverses).
 """
+from __future__ import annotations
+
 import csv
 import os
 from collections import defaultdict

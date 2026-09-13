@@ -4,6 +4,8 @@ every output column against the labelled answers.
     python3 code/evaluation/main.py            # summary + per-row diffs
     python3 code/evaluation/main.py --brief    # summary only
 """
+from __future__ import annotations
+
 import argparse
 import os
 import sys
@@ -15,7 +17,7 @@ REPO = os.path.dirname(CODE)
 sys.path.insert(0, CODE)
 
 from buyorwait import data  # noqa: E402
-from buyorwait.pipeline import OUTPUT_COLUMNS, solve_request  # noqa: E402
+from buyorwait.pipeline import solve_request  # noqa: E402
 
 EXACT = ["affordability_status", "recommended_payment_method", "payment_plan",
          "earliest_date_for_full_payment", "spending_changes_needed"]

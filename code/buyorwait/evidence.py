@@ -9,6 +9,8 @@ below decides what (if anything) a fact changes in the forecast.
 Pipeline:  LLM (claude, JSON-schema output)  --fallback-->  rule parser (regex, EN+ID)
 Results are cached per message/image content hash in code/cache/evidence_cache.json.
 """
+from __future__ import annotations
+
 import hashlib
 import json
 import os

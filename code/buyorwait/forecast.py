@@ -19,6 +19,8 @@ Calibrated against dataset/sample_requests.csv (see README "Forecast rules"):
 * Safety: the balance must stay at or above minimum_balance_to_keep at every point of every day
   of the horizon (the intra-day floor after pre-credit debits, and the end-of-day balance).
 """
+from __future__ import annotations
+
 import calendar
 import math
 import re

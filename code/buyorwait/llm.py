@@ -3,6 +3,8 @@
 Credentials come from the environment only (ANTHROPIC_API_KEY, or a .env file
 in the repo root / code/ that defines it). Nothing is ever written to disk.
 """
+from __future__ import annotations
+
 import base64
 import json
 import os

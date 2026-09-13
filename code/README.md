@@ -39,7 +39,7 @@ cp code/.env.example .env        # optional: a funded key enables the Claude pat
 | `python3 code/evaluation/main.py` | score every output column against `dataset/sample_requests.csv` |
 | `python3 code/evaluation/main.py --sensitivity` | split-half overfitting check of every calibrated knob |
 
-Python 3.10+. The engine is standard library; `anthropic` is needed only for the optional model path.
+Python 3.9+. The engine is standard library; `anthropic` is needed only for the optional model path.
 Image OCR uses Apple Vision via the Xcode command-line tools (`swiftc`) on macOS, else the `tesseract` CLI.
 Credentials are read from the environment or a `.env` file: `ANTHROPIC_API_KEY` (and
 `ANTHROPIC_WORKSPACE_ID` only for keys that are not workspace-scoped). The model defaults to

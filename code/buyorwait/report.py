@@ -1,4 +1,6 @@
 """Writes evaluation/usage_report.md for the run that produced output.csv."""
+from __future__ import annotations
+
 from datetime import datetime, timezone
 
 from .llm import PRICES

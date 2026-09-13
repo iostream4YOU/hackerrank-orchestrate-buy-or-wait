@@ -5,6 +5,8 @@ Two forecasts per request (see README):
   * adjusted (optional permitted spending changes) -> only used to rescue a
     full payment today when nothing better is safe.
 """
+from __future__ import annotations
+
 import itertools
 from dataclasses import dataclass, field
 from datetime import date, timedelta
@@ -37,10 +39,13 @@ class Decision:
 
 
 def _installment_schedule(opt):
+    """The option's own schedule. Amounts use the plan format (integer, else exactly 2dp) like every
+    labelled plan: an option stored as '984.6' is written '984.60', as '620.4' is in request_06."""
     n = int(opt["number_of_payments"])
     first = d(opt["first_payment_date"])
     freq = int(opt["payment_frequency_days"] or 0)
-    return [(first + timedelta(days=freq * k), opt["payment_amount"]) for k in range(n)]
+    amount = to_cents(opt["payment_amount"])
+    return [(first + timedelta(days=freq * k), amount) for k in range(n)]
 
 
 def _installment_months(opt) -> float:

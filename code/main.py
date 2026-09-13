@@ -5,6 +5,8 @@ Usage (from the repository root):
     python3 code/main.py --input dataset/sample_requests.csv --output /tmp/samples_out.csv
     python3 code/main.py --no-llm             # rule-based evidence only (no API calls)
 """
+from __future__ import annotations
+
 import argparse
 import csv
 import os

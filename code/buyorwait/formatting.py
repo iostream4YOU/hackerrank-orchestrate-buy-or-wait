@@ -3,6 +3,8 @@
 * amount_safe_to_pay   -> 2dp, trailing zeros stripped   (603.3, 25256, 87170.56)
 * payment_plan amounts -> integer if integral, else exactly 2dp (620.40, 25256)
 """
+from __future__ import annotations
+
 from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
 

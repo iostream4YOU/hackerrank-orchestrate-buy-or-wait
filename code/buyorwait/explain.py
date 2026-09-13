@@ -1,5 +1,7 @@
 """Deterministic decision explanations in the voice of the labelled samples:
 imperative first sentence, then the binding financial fact."""
+from __future__ import annotations
+
 from .formatting import fmt_money_text as money, fmt_date_text as human
 
 

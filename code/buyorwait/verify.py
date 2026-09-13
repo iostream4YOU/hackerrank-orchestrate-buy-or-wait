@@ -1,4 +1,6 @@
 """Hard invariants checked on every row before output.csv is written."""
+from __future__ import annotations
+
 from decimal import Decimal
 
 from .formatting import to_cents
@@ -31,7 +33,8 @@ def check(dec, ds, prof, fc) -> list:
             errs.append("partial invariant")
     if dec.method == "installments":
         opt = dec.option
-        if not opt or len(dec.plan) != int(opt["number_of_payments"]) or any(a != opt["payment_amount"] for _, a in dec.plan):
+        if not opt or len(dec.plan) != int(opt["number_of_payments"]) or \
+                any(to_cents(a) != to_cents(opt["payment_amount"]) for _, a in dec.plan):
             errs.append("installments must match a supplied option")
     if dec.method == "wait" and (len(dec.plan) != 1 or dec.plan[0][0] != dec.earliest or "full_payment" not in methods):
         errs.append("wait invariant")

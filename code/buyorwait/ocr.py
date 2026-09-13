@@ -6,6 +6,8 @@ Backends (first available wins): Apple Vision (macOS, compiled from ocr_vision.s
 grand total / total paid), then cross-checked against any amount written in words and corrected for
 the common OCR misread of a leading currency glyph (e.g. "₹79,679.26" read as "779,679.26").
 """
+from __future__ import annotations
+
 import hashlib
 import os
 import re
@@ -82,9 +84,6 @@ def ocr_rows(path):
 
 
 # --------------------------------------------------------------------------- numbers
-_NUM = re.compile(r"(?<![\w.])[^\d\s|:]{0,2}(\d[\d,.\s]*\d|\d)(?![\d])")
-
-
 def parse_number(tok: str):
     """'1,00,000.00'->100000.0, '$33,50'->33.5, '41272,0'->41272.0, '3,543.54'->3543.54"""
     t = re.sub(r"[^\d,.]", "", tok)

@@ -1,4 +1,6 @@
 """End-to-end: request rows -> verified output rows."""
+from __future__ import annotations
+
 from .data import d
 from .explain import explain
 from .forecast import build_forecast
