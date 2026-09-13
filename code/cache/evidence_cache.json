@@ -1,1 +1,4308 @@
-{}
+{
+ "img:image_01:3a30fa2ce6fa6140:event_253": {
+  "result": {
+   "amount": 4365000,
+   "amount_label": "Net Pay",
+   "contains_instructions_to_reader": true,
+   "currency": "IDR",
+   "document_date": "2019-08-31",
+   "document_type": "payslip"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_02:895a49024e068f57:event_1442": {
+  "result": {
+   "amount": 100000,
+   "amount_label": "Balance Due",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2023-08-11",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_03:7c91fc1d0cd909ac:event_1545": {
+  "result": {
+   "amount": 41272,
+   "amount_label": "Net Amount",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-02-27",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_04:d8e3c2c55c059a18:event_1700": {
+  "result": {
+   "amount": 2854,
+   "amount_label": "Item Bill",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": null,
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_05:27e4a6d771c16cd8:event_1786": {
+  "result": {
+   "amount": 704.05,
+   "amount_label": "Amount due till",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-02-06",
+   "document_type": "bill"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_06:84747444af65bb59:event_3051": {
+  "result": {
+   "amount": 1995.0,
+   "amount_label": "Total",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-01-06",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_07:892351c6721d9bd3:event_3231": {
+  "result": {
+   "amount": 8528.1,
+   "amount_label": "Total",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2025-10-29",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_08:341d6e54fec58b54:event_4535": {
+  "result": {
+   "amount": 15339.0,
+   "amount_label": "Total Amount Received",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-07-24",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_09:67954d1f7cacdad3:event_5170": {
+  "result": {
+   "amount": 723.0,
+   "amount_label": "Total Amount Received",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-06-07",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_10:40cf2607b6ad0baa:event_6033": {
+  "result": {
+   "amount": 79679.26,
+   "amount_label": "Total",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2024-06-03",
+   "document_type": "invoice"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_11:372fbeb27d7547b9:event_6859": {
+  "result": {
+   "amount": 3650.0,
+   "amount_label": "Amount Payable",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2023-01-19",
+   "document_type": "invoice"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_12:a119031e72fcc2df:event_7307": {
+  "result": {
+   "amount": 33.5,
+   "amount_label": "Total:",
+   "contains_instructions_to_reader": true,
+   "currency": "USD",
+   "document_date": "2025-10-01",
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_13:51564ff71512434e:event_7941": {
+  "result": {
+   "amount": 2298,
+   "amount_label": "Total paid",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": null,
+   "document_type": "invoice"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_14:1a2dd210f8b76224:event_9421": {
+  "result": {
+   "amount": 4543,
+   "amount_label": "TOTAL",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": null,
+   "document_type": "receipt"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_15:90fb9bdfb9d879f4:event_9806": {
+  "result": {
+   "amount": 9968,
+   "amount_label": "Grand Total",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-06-07",
+   "document_type": "invoice"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "img:image_16:78c558aac45a5185:event_10521": {
+  "result": {
+   "amount": 393.22,
+   "amount_label": "Total",
+   "contains_instructions_to_reader": true,
+   "currency": "INR",
+   "document_date": "2026-09-03",
+   "document_type": "invoice"
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:019568f39e0e2e72": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 759,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": 341.55,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:03ec19b52408b49c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:04556f622d9aad97": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2827,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:04bad9bc1d46ee0f": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 35200,
+     "currency": "ZAR",
+     "effective_date": "2026-01-15",
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:06606f11a5b3e71e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:06608378be816b4e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 196000,
+     "currency": "INR",
+     "effective_date": "2024-12-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:06b43599c029ceab": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0958581b703942c0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-02-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0a193a5c28ef6e1e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0a1a932bb788f441": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1752,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": 788.4,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0a44a5b4e1118a57": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "charge_disputed_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0c96298caf9ef1bc": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0ede19a70e7edd62": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "internal_transfer",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "transfer"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:0f6223422516f39d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:12526e308e4baa2a": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:12cd5756828c0c69": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:14c3098b0e1b7bb1": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1817294b78a3f166": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 69000,
+     "currency": "INR",
+     "effective_date": "2024-06-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:191aaa74bdf9a533": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 59000,
+     "currency": "INR",
+     "effective_date": "2026-07-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:196bd19871dae34b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 30400000,
+     "currency": "IDR",
+     "effective_date": "2026-04-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1995889865e26e69": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "charge_disputed_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1a1aaf7c9ae38d16": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2717,
+     "currency": "EUR",
+     "effective_date": "2025-08-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-08-01",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1a1f69aa58c6a8ae": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 176000,
+     "currency": "INR",
+     "effective_date": "2025-05-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-05-01",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1bdb73739ad16b25": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1c389cba2bacaa48": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1d2ec9422676aab9": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-05-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1d75df19d20b90b0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1548,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1dd1801570014360": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1e4a5e53e52ae45b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 148200,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:1f328fd9d6e2ed9b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 828,
+     "currency": "USD",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:20f8521745e803c5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:21665167ee02d1b8": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 702,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:22eb65865302dcde": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:2485e1107251073c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1346.4,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:24abba2e6b25f599": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 696,
+     "currency": "USD",
+     "effective_date": "2025-05-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:2500ac6ff882d098": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1731.6,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:2736a0f83b0f5251": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 53680,
+     "currency": "ZAR",
+     "effective_date": "2024-12-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:2816c0d3522f75c3": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1284,
+     "currency": "USD",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:28c54c008dfa2ab5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-05-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:28dafc59f8a2a2ed": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:2912381ace29b203": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:2a0a5ef6b3894fb9": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:301a43e3ef544f06": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 137150,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:324295fbd21242db": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "bill_outstanding",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:33836e8bc3d3208b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "reimbursement"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:34c1a17872ab307a": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 893.75,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:35c467c80576c5bc": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:36a8f8d734fb7029": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:379738a4f84e249e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:37ed439efbdfeb7e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "internal_transfer",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "transfer"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3a50ba432fefdeb6": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3b51a31797d607cf": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3bd97f1d7aaa6aeb": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3c626a95209f7de2": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 864,
+     "currency": "USD",
+     "effective_date": "2026-07-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3c6dd010c01ea730": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2988,
+     "currency": "USD",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3c73d324af2eb9b5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1661,
+     "currency": "EUR",
+     "effective_date": "2026-01-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3e818d5e1fbce389": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1452,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": 653.4,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:3e96ef2a08790a94": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:43dec52c3505051b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-08-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:44a4dc28b541a3d8": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:44ead4148aaadc17": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 48260000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:45ea022d8d9f5bab": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 260000,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": 117000,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:477524bd2dcf8136": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 164880,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:49b9658318edef5c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1193.4,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4a7a59a69a96011b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4a9ef189bd4abf7e": {
+  "result": {
+   "contains_instructions_to_reader": true,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "suspicious_instruction",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4af91284e2a94cf9": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1914,
+     "currency": "EUR",
+     "effective_date": "2026-04-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2026-04-15",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4b73bb7aebe92626": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4c1eb8bcd7d83d95": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 84000,
+     "currency": "INR",
+     "effective_date": "2025-05-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-05-01",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4e4fd955f42d0ee6": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 148000,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:4f45bd35543439a8": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 214000,
+     "currency": "INR",
+     "effective_date": "2024-06-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:50600f93a34e0f4a": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 30400000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": 13680000,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:51260420845b7761": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:52f5e69372050025": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 847,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:533a605ac4515e5d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2040,
+     "currency": "USD",
+     "effective_date": "2024-12-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:54019fafeeec7e09": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2112,
+     "currency": "USD",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:55d308746c907110": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "bill_outstanding",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:568f9d22e864812e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 251000,
+     "currency": "INR",
+     "effective_date": "2026-01-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2026-01-01",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:573b7116aa08ac36": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 31464000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:5af6050d71175b40": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1804,
+     "currency": "EUR",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:5c5b246426670426": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "charge_disputed_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:5ddc0fdf60f067da": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 748,
+     "currency": "EUR",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:5fb70935cb913693": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:5fe5ec7a941d2426": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6041a37b11cfec4e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 116000,
+     "currency": "INR",
+     "effective_date": "2026-04-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:606803f6e9fc3111": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:614ec8bcb5bccc57": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "internal_transfer",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "transfer"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:61f5fe1f2dd34c48": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:61fe9f14ff592124": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 8618400,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:62e3218ce6f4e598": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 49280,
+     "currency": "ZAR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:63574e031ab1297f": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 33440,
+     "currency": "ZAR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:63ea8ba6d0f7a1a9": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-02-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:64f67d6a273d7ef4": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "reimbursement"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6537633555d16a13": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "internal_transfer",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "transfer"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:67936a348abfdbed": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 152000,
+     "currency": "INR",
+     "effective_date": "2026-07-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:67ce4aac1f3b7ebc": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 23940000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:67f63f35b88f9771": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "ongoing",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:69b0aa691a41d5eb": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6a41e56b65e49dac": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6b94e70d00b3b0e5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 13420,
+     "currency": "ZAR",
+     "effective_date": "2026-07-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6c48e483ce5aa072": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2024-09-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6db513196c616094": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "charge_disputed_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6e7ea10b5a91d892": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:6ebd7726c1290c3d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 38190000,
+     "currency": "IDR",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:72aa1ef5754bb86a": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 530.4,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:736835237735575c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1924.56,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:74154a585b7853f1": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7490318c7e437509": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 145000,
+     "currency": "INR",
+     "effective_date": "2024-09-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:74fb209c0aaf7744": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 16720,
+     "currency": "ZAR",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:767a4b5c2c8d83c0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1528.56,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:77056dbf9b141aa5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2024,
+     "currency": "EUR",
+     "effective_date": "2026-01-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7914d6b47262c0fd": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "other"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7adf3be6717d719c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 38280,
+     "currency": "ZAR",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7c401b947e6df8ed": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7ccaafb47bb411f3": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7d39e61b4aa6c0ac": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7dbe607a01024bdf": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2424,
+     "currency": "USD",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:7e186e829090b10b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 126000,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:802f8a4c75cdd6a6": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 62000,
+     "currency": "INR",
+     "effective_date": "2026-01-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:813f2ee32d14d117": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 103000,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "income_confirmed",
+     "one_time_extra_amount": 46350,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:81dd527c9d336c57": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-05-23",
+     "intent": "income_date_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:84461b8286207a9f": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1188,
+     "currency": "EUR",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:8494a260b0bafd93": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 627,
+     "currency": "EUR",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:862ec66bea247e34": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 15390000,
+     "currency": "IDR",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:88b56727a08d3db7": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "ongoing",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:88ce0b6d85c1c228": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:89b842b377b44cd8": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 3072,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:8aa9e0f7e410c37c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:8d1d744ffff4ee3e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 258000,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": 116100,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:8edc526fedb05faa": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 62000,
+     "currency": "INR",
+     "effective_date": "2025-05-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2025-05-01",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:8f136320593da391": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1760,
+     "currency": "EUR",
+     "effective_date": "2024-06-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:90134350f58644e7": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 26790000,
+     "currency": "IDR",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:904a4d3924ad84ad": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "ongoing",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:954c35862f9f773f": {
+  "result": {
+   "contains_instructions_to_reader": true,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "suspicious_instruction",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:96c3a7e3a9e44404": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 42460,
+     "currency": "ZAR",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:9760ae16da7f51c9": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1222.65,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:97902c94cf7879d0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 46170000,
+     "currency": "IDR",
+     "effective_date": "2024-09-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:98309787010f1d3b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 21090000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": 9490500,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:989f7d9892b67b4d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": "INR",
+     "effective_date": "2026-07-24",
+     "intent": "receipt_amount",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "other"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:9c4e9f480ebfe37b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1815,
+     "currency": "EUR",
+     "effective_date": "2024-12-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:9d6c20b93db50541": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1037.52,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:9e539c46cce45e87": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "internal_transfer",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "transfer"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a012bd188ccead0e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1529,
+     "currency": "EUR",
+     "effective_date": "2026-04-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2026-04-15",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a2902bf3b96b04e7": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "ongoing",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a2d60f90fcbc5ae5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a334ee3631a555f4": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2123,
+     "currency": "EUR",
+     "effective_date": "2025-05-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a690c0f52892664b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "bill_outstanding",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a779c51a2fb2c178": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a83539aa7ccd31cf": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a878650971b8f0e0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1628,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:a9b8a6b9c70acef0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:ac4054a1d9338162": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1422.85,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:acd36165bce8ba55": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 627,
+     "currency": "EUR",
+     "effective_date": "2024-06-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:ad6474e934a36815": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 35860,
+     "currency": "ZAR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:b1dac497272080f9": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 30780000,
+     "currency": "IDR",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:b3a17036e4e4305a": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 42750000,
+     "currency": "IDR",
+     "effective_date": "2025-08-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:b595d4711a33808b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:b8645b9d6b110e9b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": "INR",
+     "effective_date": "2026-04-03",
+     "intent": "receipt_amount",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "other"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:b89649c2ae45b106": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:bc2c86dd7ce17b93": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 26180,
+     "currency": "ZAR",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:bc47251309ab3475": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "separate_obligations",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:bc5cf5f63d6e624d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2340,
+     "currency": "USD",
+     "effective_date": "2024-12-15",
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:bc7c3059ea568f11": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:bcb7f66bf3a3f7a7": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "ongoing",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:beabb5c538044e42": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c0fbf33cf21d6f3d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 912,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c54c0f2b6fc8c3d5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c578d3172a38062e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2376,
+     "currency": "EUR",
+     "effective_date": "2024-12-15",
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c610f926e5348247": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "unrealized_value_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c73571502649a45a": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "refund"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c7b8c6b08d36c84e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 29070000,
+     "currency": "IDR",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c84096a35ab127bc": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 968,
+     "currency": "EUR",
+     "effective_date": "2025-08-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c992bf839ecfd5f7": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "charge_disputed_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:c9c0d94caf6add2f": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 25840000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:ced92cc2fe8ffa40": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 115000,
+     "currency": "INR",
+     "effective_date": "2025-02-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d07ecf75c8e69eee": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 18700,
+     "currency": "ZAR",
+     "effective_date": "2026-07-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d19eaba2cd898ebe": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 16910000,
+     "currency": "IDR",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d318bccdd483fa2d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2772,
+     "currency": "EUR",
+     "effective_date": "2024-06-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d43ac06502810dea": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d48aa539a5ee324b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d4f01f353f8716b3": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d530062bb9a393f6": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d5b36c7f8db1fae0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "next_payment_only",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d6866d63bd0b2676": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1419,
+     "currency": "EUR",
+     "effective_date": "2026-04-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:d71d489e6ad5e37e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "gig_payout"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:dab8fcc1b97abdb1": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1485,
+     "currency": "EUR",
+     "effective_date": "2025-05-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:dac6f6dcec4990a5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "reimbursement"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:dbe24e21a2e2883d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "investment"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:dd14de5e1de9c136": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 31900,
+     "currency": "ZAR",
+     "effective_date": "2025-02-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:dd91c55d027ff1ec": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 32870000,
+     "currency": "IDR",
+     "effective_date": "2024-09-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:deeeb4a4b147adb0": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "expense_change",
+     "one_time_extra_amount": null,
+     "percent": 12,
+     "scope": "ongoing",
+     "subject": "rent"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e04b74dcdbeec19e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1672,
+     "currency": "EUR",
+     "effective_date": "2024-06-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e15fa265b1a4c130": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": "INR",
+     "effective_date": "2026-09-03",
+     "intent": "receipt_amount",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "card_charge"
+    },
+    {
+     "amount": 1296,
+     "currency": "USD",
+     "effective_date": "2026-09-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e308f652dfcf16c7": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e61f2eae31863a7f": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "one_time_income_closed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "prize"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e63249a23bf7ebc6": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "bill_outstanding",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e6f86be1892e93b6": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e72273d74099b068": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 54120,
+     "currency": "ZAR",
+     "effective_date": "2025-02-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e7e05cddd5cbe87c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e80a85d4cfcd6678": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 31889,
+     "currency": "ZAR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e8ce58537e41095d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 44270000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:e8f4094f74c2e445": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "bonus"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:eb38e40d31c9a0c5": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "internal_transfer",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "transfer"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:ecf3402834aaf12b": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 17290000,
+     "currency": "IDR",
+     "effective_date": "2026-07-15",
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:eda5cf621950f6ae": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "bill_outstanding",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "bill"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "separate_obligations",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f0d734493c4a97d3": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_ended",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f1dd028b801d3959": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 924,
+     "currency": "EUR",
+     "effective_date": "2024-12-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "invoice"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f311d15b5f6dcd08": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 38760000,
+     "currency": "IDR",
+     "effective_date": null,
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f5966cd10c2e568e": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 2177.28,
+     "currency": "USD",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f61ddd3cd3111612": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "fx_settlement_note",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "bill"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f6c6494f2bddf34c": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1680,
+     "currency": "USD",
+     "effective_date": "2025-11-15",
+     "intent": "income_confirmed",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:f8ca1262b9af1341": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 1750.32,
+     "currency": "EUR",
+     "effective_date": null,
+     "intent": "income_amount_change",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "next_payment_only",
+     "subject": "salary"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:fae64ac2b936931d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "charge_disputed_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "one_time",
+     "subject": "card_charge"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:fd9a805eec7b803d": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 158000,
+     "currency": "INR",
+     "effective_date": null,
+     "intent": "salary_continues",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": null,
+     "intent": "income_pending",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "not_applicable",
+     "subject": "commission"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ },
+ "msg:fde052fd76809011": {
+  "result": {
+   "contains_instructions_to_reader": false,
+   "facts": [
+    {
+     "amount": 50160,
+     "currency": "ZAR",
+     "effective_date": "2024-09-15",
+     "intent": "income_resumes",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "salary"
+    },
+    {
+     "amount": null,
+     "currency": null,
+     "effective_date": "2024-09-15",
+     "intent": "new_recurring_expense",
+     "one_time_extra_amount": null,
+     "percent": null,
+     "scope": "ongoing",
+     "subject": "childcare"
+    }
+   ]
+  },
+  "source": "gemini-3.1-flash-lite"
+ }
+}

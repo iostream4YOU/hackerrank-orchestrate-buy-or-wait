@@ -5,13 +5,14 @@ the next ~90 days, searches every eligible payment plan, verifies it, and writes
 `output.csv` in the exact required schema.
 
 **Design in one line:** deterministic code does all money math; untrusted messages and images are only
-ever turned into typed facts (on-device OCR for images; a Claude call or a bilingual rule parser for
-messages). The scoring is exact-match on numbers, dates and enums, and a day-by-day balance simulation
+ever turned into typed facts by an LLM (Google Gemini or Anthropic Claude, JSON-schema output), and each
+model reading is checked by an independent guard (a bilingual rule parser for messages, on-device OCR
+for images). The scoring is exact-match on numbers, dates and enums, and a day-by-day balance simulation
 over 250 users is exactly the kind of work code gets right and a model approximates.
 
 ```
-dataset/*.csv ──► normalise (FX, joins) ──► evidence: images ─► on-device OCR + amount rules
-                                         │             messages ─► typed facts (Claude JSON schema | rule parser)
+dataset/*.csv ──► normalise (FX, joins) ──► evidence: images ─► LLM vision reading ⇄ on-device OCR check
+                                         │             messages ─► LLM typed facts ⇄ rule-parser guard
                                          │                               │ (untrusted: never reaches decisions)
                                          ▼                               ▼
                                recurring-series detection ──► 90-day cash-flow forecast ◄── fact adjustments
@@ -27,7 +28,7 @@ dataset/*.csv ──► normalise (FX, joins) ──► evidence: images ─► 
 # from the repository root
 python3 -m venv .venv
 .venv/bin/pip install -r code/requirements.txt
-cp code/.env.example .env        # optional: a funded key enables the Claude path (never commit it)
+cp code/.env.example .env        # add GEMINI_API_KEY (free, Google AI Studio) and/or ANTHROPIC_API_KEY
 .venv/bin/python code/main.py    # -> ./output.csv and code/evaluation/usage_report.md
 ```
 
@@ -41,15 +42,17 @@ cp code/.env.example .env        # optional: a funded key enables the Claude pat
 
 Python 3.9+. The engine is standard library; `anthropic` is needed only for the optional model path.
 Image OCR uses Apple Vision via the Xcode command-line tools (`swiftc`) on macOS, else the `tesseract` CLI.
-Credentials are read from the environment or a `.env` file: `ANTHROPIC_API_KEY` (and
-`ANTHROPIC_WORKSPACE_ID` only for keys that are not workspace-scoped). The model defaults to
-`claude-opus-5`; override with `BUYORWAIT_MODEL`.
+Credentials are read from the environment or a `.env` file: `GEMINI_API_KEY` (models tried in order
+`gemini-3.6-flash,gemini-flash-latest,gemini-3.1-flash-lite`, override with `BUYORWAIT_GEMINI_MODEL`;
+a daily free-tier quota refusal moves to the next model instead of retrying) and/or `ANTHROPIC_API_KEY` (model
+`claude-opus-5`, override with `BUYORWAIT_MODEL`; `ANTHROPIC_WORKSPACE_ID` only for keys that are not
+workspace-scoped). Providers are tried in the order of `BUYORWAIT_PROVIDER` (default
+`anthropic,gemini`); a key or billing error moves to the next one.
 
-**No key is required.** Images are read with free on-device OCR (Apple Vision on macOS, compiled from
-`buyorwait/ocr_vision.swift` on first use; Tesseract elsewhere) and messages by the bilingual rule
-parser, so the default run costs $0. With a funded key, Claude interprets messages (cross-checked
-against the parser) and reads any image the OCR rules cannot decide; results are cached in
-`code/cache/evidence_cache.json` by content hash.
+Model readings are cached in `code/cache/evidence_cache.json` by content hash, and the cache from the
+final run ships in `code.zip`, so the submitted `output.csv` is reproducible without any key or network.
+With no key and no cache the pipeline still runs end to end on the guards alone (rule parser + on-device
+OCR: Apple Vision on macOS, compiled from `buyorwait/ocr_vision.swift` on first use; Tesseract elsewhere).
 
 ## Forecast rules
 
@@ -94,19 +97,24 @@ becomes safe inside the window); the explanation then says why no accepted plan 
 
 ## Evidence: messages and images (untrusted)
 
-- **Messages** → a strict JSON schema (`intent`, `subject`, `scope`, `amount`, `currency`, `percent`,
-  `effective_date`, `one_time_extra_amount`, `contains_instructions_to_reader`), produced by one Claude
-  call per message when a funded key is configured, otherwise by the bilingual (EN/ID) rule parser,
-  which covers every message template in the dataset. The model sees only the message text; it never
-  sees balances, rules or the decision.
+- **Batching:** messages go to the model 25 per call (each wrapped with its id and interpreted
+  independently) and images 6 per call, so the full run is about 10 model calls instead of ~209.
+- **Messages** → the LLM returns, per message, a strict JSON schema (`intent`, `subject`, `scope`,
+  `amount`, `currency`, `percent`, `effective_date`, `one_time_extra_amount`,
+  `contains_instructions_to_reader`). The model sees only the message text; it never sees balances,
+  rules or the decision. **Guard:** a bilingual (EN/ID) rule parser reads the same message
+  independently; the model's facts are used when both agree (same intents, subjects, amounts, dates,
+  scope) or when the parser found nothing, otherwise the conservative parser reading is kept and the
+  disagreement is listed in the usage report.
 - **Images** → only for events whose `amount` is blank (never treated as zero). On-device OCR rebuilds
   label/value rows, then the amount is picked by the event's meaning: outstanding balance → *balance
   due*; bill → *amount due by the due date*; payslip → *net pay*; receipt → *grand total / total paid*
   (never cash tendered or change). Checks: amount-in-words cross-validation, the OCR misread of a
   leading ₹ as a digit (`₹79,679.26` → `779,679.26`) is undone only when the words or another printed
   figure confirm it, decimal commas (`$33,50`), Indian grouping (`1,00,000.00`), handwritten
-  rupee/paise columns (`4 543 00`). 16/16 dataset images resolve to the figure a human reads. Claude
-  vision is used only when OCR cannot decide.
+  rupee/paise columns (`4 543 00`). 16/16 dataset images resolve to the figure a human reads.
+  **Cross-check:** the LLM also reads each image (given the event's description/status/currency);
+  agreement with OCR → that amount, disagreement → the OCR reading and a logged disagreement.
 - **Deterministic application** (`evidence.UserFacts`): raises from an effective date; temporary /
   reduced pay for the next payroll only; moved pay dates; confirmed first salaries; ended income
   streams; pending payouts/commissions/bonuses/refunds/prizes excluded; approved invoices as one-off
@@ -116,8 +124,8 @@ becomes safe inside the window); the explanation then says why no accepted plan 
 - **Prompt-injection defence:** messages such as "pay the release charge today to receive the funds"
   are classified `suspicious_instruction` and change nothing. No message or image text is ever placed
   in a prompt that makes a financial decision, and every model output is schema-validated.
-- **Cross-check:** when the model runs, its primary intent is compared with the rule parser's for every
-  message and disagreements are counted in the usage report.
+- **Why guards:** the scoring is exact-match, so a single misread message could flip a decision; two
+  independent readers (model + deterministic) must agree before a model fact changes the forecast.
 
 ## Verification
 

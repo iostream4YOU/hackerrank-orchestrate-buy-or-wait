@@ -17,12 +17,27 @@ checked that each tuned setting is best on both halves of the samples, so it is 
 
 - Scoring is exact match on amounts, dates, enums. A 90-day running-balance simulation across 250
   users is arithmetic; code gets it exactly right, an LLM approximates it.
-- Models are used only where language/vision is needed: messages -> typed facts, images -> amounts.
+- Models are used only where language/vision is needed: Gemini (free AI Studio tier, JSON-schema output)
+  turns each message into typed facts and reads each receipt/bill image. Calls are batched (25 messages
+  or 6 images per call): the full run is ~10 calls, ~100k tokens, $0. Free keys allow ~20 requests per
+  model per day, so batching is what made it work; a daily-quota refusal falls through to the next model.
+- Final run (usage report): 10 Gemini calls, 67,791 tokens, $0. The free Flash models' daily quotas were
+  used up during development, so the run fell back to `gemini-3.1-flash-lite`. Images: model and OCR agree
+  on 11/11. Messages: 142/198 model readings agree with the rule parser; the other 56 (mostly the lighter
+  model labelling "first salary" as one-time, or "regular salary + arrears" as salary-continues) keep the
+  parser reading and are listed. With `gemini-3.6-flash` agreement was 166/198. Output is identical
+  either way - that is the point of the guard. The guard
+  also found a parser bug (a message with two dates: a receipt date and a salary date) that the model
+  read correctly - fixed.
+- Every model reading passes an independent guard: a bilingual rule parser for messages and on-device
+  OCR for images. Agreement -> the model's facts are used; disagreement -> the conservative reading is
+  kept and logged in the usage report. Exact-match scoring makes a two-reader check worth it.
 - Safety by construction: message text never reaches a decision prompt; outputs are schema-validated;
   instruction-bearing messages (the planted "pay the release charge today" scam) change nothing.
-- Cost: the default run is $0 (rule parser for messages, on-device OCR for images). With a funded key,
-  Claude (`claude-opus-5`, JSON-schema outputs) interprets messages and is cross-checked against the
-  rule parser; results are cached by content hash.
+- Cost: $0 - Gemini free tier for the model calls, OCR on-device, everything else is code. The same
+  interface supports Claude (`claude-opus-5`) when a funded key is present; a key/billing error falls
+  through to the next provider. Model readings are cached by content hash and shipped, so the output
+  reproduces without keys.
 
 ## Key findings (be ready to explain each)
 
@@ -75,8 +90,8 @@ checked that each tuned setting is best on both halves of the samples, so it is 
   when a row's decision is near a threshold that can flip earliest/plan (request_11, request_17).
 - request_21: the reference seems to include two 21-day items before payday that my cadence puts just
   after it; I did not add a special case without a general reason.
-- The Claude path is implemented and reached the API, but the account had no credits, so the final
-  run used the rule parser and OCR. Output is identical in structure; the report states this.
+- The Claude path is implemented but the Anthropic account had no credit, so the final run used Gemini
+  (free tier). The usage report shows the real Gemini calls and tokens.
 
 ## How I used AI while building
 

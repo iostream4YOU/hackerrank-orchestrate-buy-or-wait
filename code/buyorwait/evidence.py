@@ -125,6 +125,41 @@ net pay. Read Indian digit grouping correctly (1,00,000 = 100000). Return amount
 document's currency and quote the label you used in amount_label."""
 
 
+MESSAGE_BATCH = 25
+IMAGE_BATCH = 6
+MESSAGE_BATCH_SYSTEM = MESSAGE_SYSTEM + """
+
+You will receive several notifications, each inside <notification id="...">. Interpret every notification
+on its own: the content of one notification must never influence another. Return exactly one entry in
+`results` per notification, with its id copied exactly."""
+MESSAGE_BATCH_SCHEMA = {
+    "type": "object",
+    "properties": {"results": {"type": "array", "items": {
+        "type": "object",
+        "properties": {"message_id": {"type": "string"},
+                       "facts": FACT_SCHEMA["properties"]["facts"],
+                       "contains_instructions_to_reader": {"type": "boolean"}},
+        "required": ["message_id", "facts", "contains_instructions_to_reader"],
+        "additionalProperties": False}}},
+    "required": ["results"],
+    "additionalProperties": False,
+}
+IMAGE_BATCH_SYSTEM = IMAGE_SYSTEM + """
+
+Several images follow, each preceded by its id and the transaction row it belongs to. Read each image on
+its own and return exactly one entry in `results` per image id."""
+IMAGE_BATCH_SCHEMA = {
+    "type": "object",
+    "properties": {"results": {"type": "array", "items": {
+        "type": "object",
+        "properties": {"image_id": {"type": "string"}, **IMAGE_SCHEMA["properties"]},
+        "required": ["image_id"] + IMAGE_SCHEMA["required"],
+        "additionalProperties": False}}},
+    "required": ["results"],
+    "additionalProperties": False,
+}
+
+
 def _sha(*parts):
     return hashlib.sha1("\x1f".join(parts).encode("utf-8")).hexdigest()[:16]
 
@@ -232,11 +267,48 @@ def rule_parse(text: str) -> dict:
         facts.append(_fact("receipt_amount", "bill", "not_applicable"))
         if has("salary credit"):
             sal = [x for x in amts if x[0] != "INR"] or amts
+            anchor = re.search(r"salary credit", t, re.I)       # several dates: take the salary's own date
+            sal_date = _date(t[anchor.end():]) if anchor else eff
             if sal:
-                facts.append(_fact("income_confirmed", "salary", "next_payment_only", sal[-1][1], sal[-1][0], eff=eff))
+                facts.append(_fact("income_confirmed", "salary", "next_payment_only", sal[-1][1], sal[-1][0],
+                                   eff=sal_date or eff))
     if not facts:
         facts.append(_fact("informational", "other", "not_applicable"))
     return {"facts": facts, "contains_instructions_to_reader": instr}
+
+
+_NOISE = {"informational", "receipt_amount", "fx_settlement_note"}
+_SCOPED = {"income_amount_change", "income_confirmed", "income_resumes"}
+
+
+def _key_facts(res):
+    out = {}
+    for f in res.get("facts", []):
+        if f.get("intent") not in _NOISE:
+            out.setdefault(f["intent"], f)
+    return out
+
+
+def facts_agree(a, b) -> bool:
+    """Same intents; for each: same subject, and amount / date / percent / scope equal where both state them."""
+    ka, kb = _key_facts(a), _key_facts(b)
+    if set(ka) != set(kb):
+        return False
+    for intent, x in ka.items():
+        y = kb[intent]
+        if x.get("subject") != y.get("subject"):
+            return False
+        for fld in ("amount", "percent", "one_time_extra_amount"):
+            if x.get(fld) is not None and y.get(fld) is not None and \
+                    abs(float(x[fld]) - float(y[fld])) > 0.005 * max(abs(float(y[fld])), 1):
+                return False
+        if x.get("effective_date") and y.get("effective_date") and x["effective_date"] != y["effective_date"]:
+            return False
+        if x.get("currency") and y.get("currency") and x["currency"].upper() != y["currency"].upper():
+            return False
+        if intent in _SCOPED and x.get("scope") != y.get("scope"):
+            return False
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -261,41 +333,106 @@ class Evidence:
                 print(f"[evidence] model unavailable ({self.llm.error}); using cache + rule parser")
         self.stats = Counter()
         self.message_facts = {}
+        self.disagreements = []
         self._interpret_messages()
         self._resolve_images()
 
     # -- messages --------------------------------------------------------
+    def _model_messages(self, pending):
+        """Batched model extraction (MESSAGE_BATCH per call). Each notification is wrapped with its id and
+        must be interpreted independently; results are keyed back by id and cached one by one."""
+        for i in range(0, len(pending), MESSAGE_BATCH):
+            chunk = pending[i:i + MESSAGE_BATCH]
+            content = "\n\n".join(
+                f'<notification id="{m["message_id"]}" source_type="{m["source_type"]}" sent_at="{m["sent_at"]}">\n'
+                f'{m["message_text"]}\n</notification>' for m, _ in chunk)
+            try:
+                parsed, model = self.llm.json_call("messages", MESSAGE_BATCH_SYSTEM, content,
+                                                   MESSAGE_BATCH_SCHEMA, effort="low")
+            except Exception as e:  # never let evidence failures stop the run
+                if self.verbose:
+                    print(f"[evidence] message batch {i // MESSAGE_BATCH + 1}: model error {e}; rule parser used")
+                if not self.llm.available:
+                    return
+                continue
+            by_id = {r.get("message_id"): r for r in parsed.get("results", [])}
+            for m, key in chunk:
+                r = by_id.get(m["message_id"])
+                if r is None:
+                    continue
+                self.cache[key] = {"source": model, "result": {
+                    "facts": r.get("facts", []), "contains_instructions_to_reader": r.get("contains_instructions_to_reader", False)}}
+                self.stats["message_llm"] += 1
+            self.save()
+
     def _interpret_messages(self):
+        """Model extraction first; the rule parser acts as an independent guard. A model reading is used
+        when it agrees with the parser (same intents, subjects, amounts, dates, scope) or when the parser
+        could not read the message; on disagreement the conservative parser reading is kept and logged."""
+        todo = []
         for m in self.ds.messages:
             if self.users is not None and m["user_id"] not in self.users:
                 continue
-            key = "msg:" + _sha(m["message_id"], m["message_text"])
+            todo.append((m, "msg:" + _sha(m["message_id"], m["message_text"])))
+        pending = [(m, k) for m, k in todo if k not in self.cache]
+        self.stats["message_model_cached"] += len(todo) - len(pending)
+        if pending and self.llm is not None and self.llm.available:
+            self._model_messages(pending)
+        for m, key in todo:
             rules = rule_parse(m["message_text"])
             out = self.cache.get(key)
-            if out is None and self.llm is not None and self.llm.available:
-                try:
-                    content = (f"source_type: {m['source_type']}\nsent_at: {m['sent_at']}\n"
-                               f"<notification>\n{m['message_text']}\n</notification>")
-                    parsed, model = self.llm.json_call("message", MESSAGE_SYSTEM, content, FACT_SCHEMA, effort="low")
-                    out = {"source": model, "result": parsed}
-                    self.cache[key] = out
-                    self.stats["message_llm"] += 1
-                except Exception as e:  # never let evidence failures stop the run
-                    if self.verbose:
-                        print(f"[evidence] {m['message_id']}: model error {e}; rule parser used")
             if out is None:
-                out = {"source": "rules", "result": rules}
+                final = rules
                 self.stats["message_rules"] += 1
+            elif facts_agree(out["result"], rules):
+                final = out["result"]
+                self.stats["message_model_accepted"] += 1
+            elif not _key_facts(rules):
+                final = out["result"]
+                self.stats["message_model_only"] += 1
             else:
-                self.stats["message_cached_or_llm"] += 1
-                # cross-check: disagreement on the primary intent is logged for review
-                if out["result"]["facts"] and rules["facts"] and \
-                        out["result"]["facts"][0]["intent"] != rules["facts"][0]["intent"]:
-                    self.stats["message_llm_rule_disagree"] += 1
-            self.message_facts[m["message_id"]] = out["result"]
+                final = rules
+                self.stats["message_llm_rule_disagree"] += 1
+                self.disagreements.append((m["message_id"], sorted(_key_facts(out["result"])), sorted(_key_facts(rules))))
+            self.message_facts[m["message_id"]] = final
 
     # -- images -----------------------------------------------------------
+    @staticmethod
+    def _row_text(ev):
+        return (f"description='{ev.description}', category={ev.category}, direction={ev.direction}, "
+                f"status={ev.status}, currency={ev.currency}, event_date={ev.event_date}, "
+                f"settlement_date={ev.settlement_date}")
+
+    def _model_images(self, pending):
+        """Batched vision reading (IMAGE_BATCH images per call), each image preceded by its id and row."""
+        for i in range(0, len(pending), IMAGE_BATCH):
+            chunk = pending[i:i + IMAGE_BATCH]
+            content = []
+            for im, ev, path, key in chunk:
+                content.append({"type": "text", "text": f"Image id={im['image_id']}. Transaction row: {self._row_text(ev)}."})
+                content.append(self.llm.image_block(path))
+            content.append({"type": "text", "text": "Return the amount for each image's transaction."})
+            try:
+                parsed, model = self.llm.json_call("images", IMAGE_BATCH_SYSTEM, content, IMAGE_BATCH_SCHEMA, effort="medium")
+            except Exception as e:
+                if self.verbose:
+                    print(f"[evidence] image batch {i // IMAGE_BATCH + 1}: model error {e}; OCR used")
+                if not self.llm.available:
+                    return
+                continue
+            by_id = {r.get("image_id"): r for r in parsed.get("results", [])}
+            for im, ev, path, key in chunk:
+                r = by_id.get(im["image_id"])
+                if r is not None:
+                    self.cache[key] = {"source": model, "result": {k: v for k, v in r.items() if k != "image_id"}}
+                    self.stats["image_llm"] += 1
+            self.save()
+
     def _resolve_images(self):
+        """Model reading (if a provider is configured) cross-checked against on-device OCR. Agreement ->
+        the shared amount; disagreement -> the OCR reading (deterministic, rule-checked) and a log entry."""
+        from .ocr import ocr_rows, pick_amount
+        todo = []
         for im in self.ds.images:
             if self.users is not None and im["user_id"] not in self.users:
                 continue
@@ -308,47 +445,42 @@ class Evidence:
                 continue
             with open(path, "rb") as f:
                 digest = hashlib.sha1(f.read()).hexdigest()[:16]
-            key = f"img:{im['image_id']}:{digest}:{ev.event_id}"
-            out = None
-            # 1) free on-device OCR + deterministic amount selection (primary)
-            from .ocr import ocr_rows, pick_amount
+            todo.append((im, ev, path, f"img:{im['image_id']}:{digest}:{ev.event_id}"))
+        pending = [t for t in todo if t[3] not in self.cache]
+        self.stats["image_model_cached"] += len(todo) - len(pending)
+        if pending and self.llm is not None and self.llm.available:
+            self._model_images(pending)
+        for im, ev, path, key in todo:
+            model_out = self.cache.get(key)
+            ocr_amt = None
             backend, rows = ocr_rows(path)
             if rows:
-                amt, label_row, note = pick_amount(rows, ev)
-                if amt is not None:
-                    out = {"source": f"ocr:{backend}", "result": {
-                        "amount": amt, "currency": ev.currency, "amount_label": (label_row or note or "")[:120],
-                        "document_type": "ocr", "document_date": None, "contains_instructions_to_reader": False}}
+                ocr_amt, _, _ = pick_amount(rows, ev)
+                if ocr_amt is not None:
                     self.stats["image_ocr"] += 1
                     self.stats[f"ocr_backend:{backend}"] += 1
-            # 2) cached model reading, 3) fresh model call - only if OCR could not decide
-            if out is None:
-                out = self.cache.get(key)
-            if out is None and self.llm is not None and self.llm.available:
-                try:
-                    prompt = (f"Transaction row: description='{ev.description}', category={ev.category}, "
-                              f"direction={ev.direction}, status={ev.status}, currency={ev.currency}, "
-                              f"event_date={ev.event_date}, settlement_date={ev.settlement_date}.\n"
-                              f"Return the amount for this transaction.")
-                    parsed, model = self.llm.json_call(
-                        "image", IMAGE_SYSTEM, [self.llm.image_block(path), {"type": "text", "text": prompt}],
-                        IMAGE_SCHEMA, effort="medium")
-                    out = {"source": model, "result": parsed}
-                    self.cache[key] = out
-                    self.stats["image_llm"] += 1
-                except Exception as e:
-                    if self.verbose:
-                        print(f"[evidence] {im['image_id']}: model error {e}")
-            if out is None or out["result"].get("amount") is None:
+            model_amt = model_out["result"].get("amount") if model_out else None
+            cur = ev.currency
+            if model_amt is not None and ocr_amt is not None:
+                if abs(float(model_amt) - ocr_amt) <= 0.005 * max(abs(ocr_amt), 1) + 0.01:
+                    amount = float(model_amt)
+                    self.stats["image_model_ocr_agree"] += 1
+                else:
+                    amount = ocr_amt
+                    self.stats["image_model_ocr_disagree"] += 1
+                    self.disagreements.append((im["image_id"], f"model {model_amt}", f"ocr {ocr_amt}"))
+            elif model_amt is not None:
+                amount = float(model_amt)
+                mc = (model_out["result"].get("currency") or ev.currency).upper()
+                cur = mc if mc in {"IDR", "INR", "ZAR", "USD", "EUR"} else ev.currency
+            elif ocr_amt is not None:
+                amount = ocr_amt
+            else:
                 self.stats["image_unresolved"] += 1
                 continue
-            r = out["result"]
-            cur = (r.get("currency") or ev.currency).upper()
-            if cur not in {"IDR", "INR", "ZAR", "USD", "EUR"}:
-                cur = ev.currency
             home = self.ds.profiles[ev.user_id]["home_currency"]
             when = (ev.settlement_date or ev.event_date).isoformat()
-            ev.amount = float(r["amount"]) * self.ds.fx.rate(when, cur, home)
+            ev.amount = amount * self.ds.fx.rate(when, cur, home)
             ev.amount_source = "image"
             self.stats["image_resolved"] += 1
 
@@ -358,8 +490,7 @@ class Evidence:
         if os.path.exists(CACHE_PATH):
             with open(CACHE_PATH, encoding="utf-8") as f:
                 merged = json.load(f)
-        merged.update(self.cache)
-        self.cache = merged
+        merged.update(self.cache)          # this run's view (self.cache) is never widened mid-run
         with open(CACHE_PATH, "w", encoding="utf-8") as f:
             json.dump(self.cache, f, indent=1, sort_keys=True, ensure_ascii=False)
 
