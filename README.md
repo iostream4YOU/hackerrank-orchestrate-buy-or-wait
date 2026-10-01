@@ -1,3 +1,17 @@
+# Buy or Wait? — my solution (HackerRank Orchestrate, Sept 2026)
+
+A 24-hour hackathon build by [@iostream4YOU](https://github.com/iostream4YOU): an affordability agent that decides whether a user can safely pay for a purchase now, in installments, partially, later, or not at all.
+
+- **Deterministic engine:** rebuilds each user's recurring income and expenses, simulates 86 days of cash flow, and searches every allowed payment plan against the minimum-balance rule.
+- **LLMs only for evidence:** messages and bill images become JSON-schema facts, each cross-checked by a rule parser or on-device OCR. Message text never reaches decision code, so a planted scam instruction changes nothing.
+- **Evaluation harness:** per-column exact-match scoring plus split-half overfitting checks on the labelled samples.
+
+**Start here:** [`code/README.md`](code/README.md) (design, forecast rules, decision logic) · [`code/evaluation/usage_report.md`](code/evaluation/usage_report.md) (model calls and tokens).
+
+The original challenge brief from HackerRank follows.
+
+---
+
 # HackerRank Orchestrate
 
 Starter repository for the **HackerRank Orchestrate** 24-hour hackathon (September 2026).
